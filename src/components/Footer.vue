@@ -23,12 +23,14 @@
       </v-flex>
       <v-flex>
         <v-btn class="app_download ma-3" color="black" large>
+          <v-icon class="pr-6">mdi-36px mdi-apple</v-icon>
           <span style="white-space: normal;">
             Get it on<br />
             <h3>App Store</h3>
           </span>
         </v-btn>
         <v-btn class="app_download ma-3" color="black" large>
+          <v-icon class="pr-6">mdi-36px mdi-google-play</v-icon>
           <span style="white-space: normal;">
             Get it on<br />
             <h3>Google Play</h3>

@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar absolute prominent color="#3B84CD">
+  <v-app-bar absolute prominent flat color="#3B84CD">
     <v-flex>
       <v-img
         alt="Vuetify Logo"
@@ -22,30 +22,33 @@
           flat
         ></v-text-field>
         <v-btn
-          class="search_button"
+          class="hidden-sm-and-down search_button"
           depressed
           large
           height="48px"
-          color="yellow"
+          color="#F8D766"
         >
-          <h2><v-icon>mdi-magnify</v-icon></h2>
+          <h2><v-icon>mdi-36px mdi-magnify</v-icon></h2>
         </v-btn>
       </v-row>
     </v-flex>
-    <v-col cols="4" align="end">
+    <v-col cols="5" align="end">
       <v-row justify="end">
-        <v-btn text color="white" large>
-          <v-icon class="ma-2">mdi-apps</v-icon> App
+        <v-btn text color="white" small>
+          <v-icon class="ma-1">mdi-apps</v-icon>
+          <span class="hidden-sm-and-down">App</span>
         </v-btn>
-        <v-btn text color="white" large>
-          <v-icon class="ma-2">mdi-account-group</v-icon> Partner with Us
+        <v-btn text color="white" small>
+          <v-icon class="ma-1">mdi-account-group</v-icon>
+          <span class="hidden-sm-and-down">Partner with Us</span>
         </v-btn>
-        <v-btn text color="white" large>
-          <v-icon class="ma-2">mdi-account-tie-voice</v-icon> Customer Care
+        <v-btn text color="white" small>
+          <v-icon class="ma-1">mdi-account-tie-voice</v-icon>
+          <span class="hidden-sm-and-down">Customer Care</span>
         </v-btn>
       </v-row>
       <v-row justify="end"></v-row>
-      <v-btn class="mr-3 ml-3 mt-1 white--text" color="#326FAB" large>
+      <v-btn class="mr-3 ml-3 mt-4 white--text" color="#326FAB" large>
         <v-icon class="ma-2">mdi-account-circle</v-icon> Sign-In
       </v-btn>
     </v-col>
@@ -53,7 +56,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    search: ""
+  })
+};
 </script>
 
 <style scoped>
