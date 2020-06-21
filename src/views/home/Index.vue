@@ -9,12 +9,14 @@
             hide-delimiter-background
             show-arrows-on-hover
           >
-            <v-carousel-item v-for="(slide, i) in slides" :key="i">
-              <v-sheet :color="colors[i]" height="100%">
-                <v-row class="fill-height" align="center" justify="center">
-                  <div class="display-3">{{ slide }} Slide</div>
-                </v-row>
-              </v-sheet>
+            <v-carousel-item
+              v-for="(item, i) in items"
+              :key="i"
+              :src="item.src"
+            >
+              <div class="message_box hidden-sm-and-down display-1">
+                {{ item.text }}
+              </div>
             </v-carousel-item>
           </v-carousel>
         </v-flex>
@@ -27,14 +29,24 @@
 export default {
   name: "Home",
   data: () => ({
-    colors: [
-      "indigo",
-      "warning",
-      "pink darken-2",
-      "red lighten-1",
-      "deep-purple accent-4"
-    ],
-    slides: ["First", "Second", "Third", "Fourth", "Fifth"]
+    items: [
+      {
+        src: require("@/assets/images/slide0.png"),
+        text: '"We make learning affordable and available anytime, anywhere."'
+      },
+      {
+        src: require("@/assets/images/slide0.png"),
+        text: '"We make learning affordable and available anytime, anywhere."'
+      },
+      {
+        src: require("@/assets/images/slide0.png"),
+        text: '"We make learning affordable and available anytime, anywhere."'
+      },
+      {
+        src: require("@/assets/images/slide0.png"),
+        text: '"We make learning affordable and available anytime, anywhere."'
+      }
+    ]
   })
 };
 </script>
@@ -42,5 +54,11 @@ export default {
 <style scoped>
 .home {
   margin-top: 150px;
+}
+
+.message_box {
+  margin-left: 20px;
+  margin-top: 160px;
+  width: 400px;
 }
 </style>

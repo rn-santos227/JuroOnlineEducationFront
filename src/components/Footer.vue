@@ -6,9 +6,8 @@
           alt="Vuetify Logo"
           class="app_download shrink mr-2 footer-log"
           contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          src="../assets/logos/03-removebg-preview.png"
           transition="scale-transition"
-          width="40"
         />
       </div>
     </v-flex>

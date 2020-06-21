@@ -2,9 +2,11 @@
   <div v-if="authenticated" class="nav_main">
     <v-navigation-drawer
       v-model="drawer"
+      style="z-index:2"
+      clipped
+      stateless
       :mini-variant.sync="mini"
       hide-overlay
-      stateless
       permanent
     >
       <v-list-item class="px-2 nav_head">
@@ -24,7 +26,7 @@
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>{{ item.title }}</v-list-item-title>
-            <v-divider :inset="inset"></v-divider>
+            <v-divider></v-divider>
           </v-list-item-content>
         </v-list-item>
       </v-list>

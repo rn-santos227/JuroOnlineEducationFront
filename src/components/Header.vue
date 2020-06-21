@@ -2,12 +2,11 @@
   <v-app-bar absolute prominent flat color="#3B84CD">
     <v-flex>
       <v-img
-        alt="Vuetify Logo"
-        class="shrink ma-6"
+        alt="Juro Online Education Logo"
         contain
-        src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+        src="../assets/logos/03-removebg-preview.png"
         transition="scale-transition"
-        width="40"
+        width="220"
       />
     </v-flex>
     <v-flex>
@@ -48,7 +47,12 @@
         </v-btn>
       </v-row>
       <v-row justify="end"></v-row>
-      <v-btn class="mr-3 ml-3 mt-4 white--text" color="#326FAB" large>
+      <v-btn
+        class="mr-3 ml-3 mt-4 white--text"
+        color="#326FAB"
+        large
+        @click.prevent="openLogin()"
+      >
         <v-icon class="ma-2">mdi-account-circle</v-icon> Sign-In
       </v-btn>
     </v-col>
@@ -59,7 +63,12 @@
 export default {
   data: () => ({
     search: ""
-  })
+  }),
+  methods: {
+    openLogin() {
+      this.$root.$emit("show_login");
+    }
+  }
 };
 </script>
 
